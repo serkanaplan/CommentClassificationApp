@@ -1,0 +1,74 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/SearchBar.css">
+    <link rel="stylesheet" href="~/css/Animation.css">
+    <link rel="stylesheet" href="~/css/Result.css">
+}
+
+@model CommentModel   
+
+<center>
+    <h1 class="title display-5 mb-5 my-5">
+        Herhangi bir yorum girin.
+        <br> 
+        Olumlu mu, olumsuz mu olduğunu Yapay Zeka tahmin etsin :)
+    </h1>
+  
+    <form asp-action="Index" method="post">
+        <div class="input-container">
+            <input asp-for="@Model.Text" type="text" placeholder="Yorum Gir">
+            <button class="button">Tahmin Et</button>
+        </div>
+    </form>
+    @if(Model!=null)
+    {
+        <h1 style="margin-top: 20px; ">Sonuç </h1>
+    }
+    else
+    {
+        <div class="loader my-5">
+            <svg viewBox="0 0 80 80">
+                <circle id="test" cx="40" cy="40" r="32"></circle>
+            </svg>
+        </div>
+        <div class="loader triangle my-5">
+            <svg viewBox="0 0 86 80">
+                <polygon points="43 8 79 72 7 72"></polygon>
+            </svg>
+        </div>
+        <div class="loader my-5">
+            <svg viewBox="0 0 80 80">
+                <rect x="8" y="8" width="64" height="64"></rect>
+            </svg>
+        </div>
+    }
+
+    <div class="container">
+        <svg viewBox="0 0 960 300">
+            <symbol id="s-text">
+                <text text-anchor="middle" x="50%" y="40%">
+                    @if(Model!=null)
+                    {
+                        @if (Model.Result == 0)
+                        {
+                            <text> olumsuz</text>
+                        }
+                        else
+                        {
+                            <text>Olumlu</text>
+                        }
+                    }
+                </text>
+            </symbol>
+            <g class="g-ants">
+                <use xlink:href="#s-text" class="text-copy"></use>
+                <use xlink:href="#s-text" class="text-copy"></use>
+                <use xlink:href="#s-text" class="text-copy"></use>
+                <use xlink:href="#s-text" class="text-copy"></use>
+                <use xlink:href="#s-text" class="text-copy"></use>
+            </g>
+        </svg>
+    </div>
+</center>

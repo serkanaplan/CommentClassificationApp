@@ -1,0 +1,483 @@
+﻿{
+  "Scenario": "Classification",
+  "DataSource": {
+    "Type": "TabularFile",
+    "Version": 1,
+    "FilePath": "C:\\Users\\serka\\Desktop\\ClassificationApp\\e-ticaret_urun_yorumlari.csv",
+    "Delimiter": ";",
+    "DecimalMarker": ".",
+    "HasHeader": true,
+    "ColumnProperties": [
+      {
+        "ColumnName": "Metin",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "Durum",
+        "ColumnPurpose": "Label",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      }
+    ]
+  },
+  "Environment": {
+    "Type": "LocalCPU",
+    "Version": 1
+  },
+  "RunHistory": {
+    "Version": 3,
+    "Type": "Result",
+    "Trials": [
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LbfgsMaximumEntropyMulti",
+        "Score": 0.73700143672027008,
+        "RuntimeInSeconds": 3.43,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e7 * e10",
+          "e0": {
+            "InputColumnName": "Metin",
+            "OutputColumnName": "Metin"
+          },
+          "e1": {
+            "InputColumnNames": [
+              "Metin"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e10": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          },
+          "e2": {
+            "OutputColumnName": "Durum",
+            "InputColumnName": "Durum",
+            "AddKeyValueAnnotationsAsText": false
+          },
+          "e7": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "Durum",
+            "FeatureColumnName": "Features"
+          },
+          "e3": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "LearningRate": 0.099999999999999978,
+            "LabelColumnName": "Durum",
+            "FeatureColumnName": "Features"
+          },
+          "e4": {
+            "NumberOfTrees": 4,
+            "NumberOfLeaves": 4,
+            "FeatureFraction": 1.0,
+            "LabelColumnName": "Durum",
+            "FeatureColumnName": "Features"
+          },
+          "e5": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 1.0,
+            "NumberOfTrees": 4,
+            "SubsampleFraction": 1.0,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "L1Regularization": 2E-10,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "Durum",
+            "FeatureColumnName": "Features"
+          },
+          "e6": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "Durum",
+            "FeatureColumnName": "Features"
+          },
+          "e8": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 0.1,
+            "LabelColumnName": "Durum",
+            "FeatureColumnName": "Features"
+          },
+          "e9": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 0.1,
+            "LabelColumnName": "Durum",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LbfgsLogisticRegressionOva",
+        "Score": 0.72118081151390356,
+        "RuntimeInSeconds": 3.206,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e6 * e10",
+          "e0": {
+            "InputColumnName": "Metin",
+            "OutputColumnName": "Metin"
+          },
+          "e1": {
+            "InputColumnNames": [
+              "Metin"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e10": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          },
+          "e2": {
+            "OutputColumnName": "Durum",
+            "InputColumnName": "Durum",
+            "AddKeyValueAnnotationsAsText": false
+          },
+          "e6": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "Durum",
+            "FeatureColumnName": "Features"
+          },
+          "e3": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "LearningRate": 0.099999999999999978,
+            "LabelColumnName": "Durum",
+            "FeatureColumnName": "Features"
+          },
+          "e4": {
+            "NumberOfTrees": 4,
+            "NumberOfLeaves": 4,
+            "FeatureFraction": 1.0,
+            "LabelColumnName": "Durum",
+            "FeatureColumnName": "Features"
+          },
+          "e5": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 1.0,
+            "NumberOfTrees": 4,
+            "SubsampleFraction": 1.0,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "L1Regularization": 2E-10,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "Durum",
+            "FeatureColumnName": "Features"
+          },
+          "e7": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "Durum",
+            "FeatureColumnName": "Features"
+          },
+          "e8": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 0.1,
+            "LabelColumnName": "Durum",
+            "FeatureColumnName": "Features"
+          },
+          "e9": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 0.1,
+            "LabelColumnName": "Durum",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LbfgsMaximumEntropyMulti",
+        "Score": 0.70166676497852765,
+        "RuntimeInSeconds": 8.643,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e7 * e10",
+          "e0": {
+            "InputColumnName": "Metin",
+            "OutputColumnName": "Metin"
+          },
+          "e1": {
+            "InputColumnNames": [
+              "Metin"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e10": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          },
+          "e2": {
+            "OutputColumnName": "Durum",
+            "InputColumnName": "Durum",
+            "AddKeyValueAnnotationsAsText": false
+          },
+          "e7": {
+            "L1Regularization": 4.33396959,
+            "L2Regularization": 0.04676,
+            "LabelColumnName": "Durum",
+            "FeatureColumnName": "Features"
+          },
+          "e3": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "LearningRate": 0.099999999999999978,
+            "LabelColumnName": "Durum",
+            "FeatureColumnName": "Features"
+          },
+          "e4": {
+            "NumberOfTrees": 4,
+            "NumberOfLeaves": 4,
+            "FeatureFraction": 1.0,
+            "LabelColumnName": "Durum",
+            "FeatureColumnName": "Features"
+          },
+          "e5": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 1.0,
+            "NumberOfTrees": 4,
+            "SubsampleFraction": 1.0,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "L1Regularization": 2E-10,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "Durum",
+            "FeatureColumnName": "Features"
+          },
+          "e6": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "Durum",
+            "FeatureColumnName": "Features"
+          },
+          "e8": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 0.1,
+            "LabelColumnName": "Durum",
+            "FeatureColumnName": "Features"
+          },
+          "e9": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 0.1,
+            "LabelColumnName": "Durum",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastForestOva",
+        "Score": 0.66909828416120865,
+        "RuntimeInSeconds": 10.582,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e4 * e10",
+          "e0": {
+            "InputColumnName": "Metin",
+            "OutputColumnName": "Metin"
+          },
+          "e1": {
+            "InputColumnNames": [
+              "Metin"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e10": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          },
+          "e2": {
+            "OutputColumnName": "Durum",
+            "InputColumnName": "Durum",
+            "AddKeyValueAnnotationsAsText": false
+          },
+          "e4": {
+            "NumberOfTrees": 4,
+            "NumberOfLeaves": 4,
+            "FeatureFraction": 1.0,
+            "LabelColumnName": "Durum",
+            "FeatureColumnName": "Features"
+          },
+          "e3": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "LearningRate": 0.099999999999999978,
+            "LabelColumnName": "Durum",
+            "FeatureColumnName": "Features"
+          },
+          "e5": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 1.0,
+            "NumberOfTrees": 4,
+            "SubsampleFraction": 1.0,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "L1Regularization": 2E-10,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "Durum",
+            "FeatureColumnName": "Features"
+          },
+          "e6": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "Durum",
+            "FeatureColumnName": "Features"
+          },
+          "e7": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "Durum",
+            "FeatureColumnName": "Features"
+          },
+          "e8": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 0.1,
+            "LabelColumnName": "Durum",
+            "FeatureColumnName": "Features"
+          },
+          "e9": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 0.1,
+            "LabelColumnName": "Durum",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastForestOva",
+        "Score": 0.66164443644186821,
+        "RuntimeInSeconds": 9.703,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e4 * e10",
+          "e0": {
+            "InputColumnName": "Metin",
+            "OutputColumnName": "Metin"
+          },
+          "e1": {
+            "InputColumnNames": [
+              "Metin"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e10": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          },
+          "e2": {
+            "OutputColumnName": "Durum",
+            "InputColumnName": "Durum",
+            "AddKeyValueAnnotationsAsText": false
+          },
+          "e4": {
+            "NumberOfTrees": 4,
+            "NumberOfLeaves": 4,
+            "FeatureFraction": 0.781596065,
+            "LabelColumnName": "Durum",
+            "FeatureColumnName": "Features"
+          },
+          "e3": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "LearningRate": 0.099999999999999978,
+            "LabelColumnName": "Durum",
+            "FeatureColumnName": "Features"
+          },
+          "e5": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 1.0,
+            "NumberOfTrees": 4,
+            "SubsampleFraction": 1.0,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "L1Regularization": 2E-10,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "Durum",
+            "FeatureColumnName": "Features"
+          },
+          "e6": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "Durum",
+            "FeatureColumnName": "Features"
+          },
+          "e7": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "Durum",
+            "FeatureColumnName": "Features"
+          },
+          "e8": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 0.1,
+            "LabelColumnName": "Durum",
+            "FeatureColumnName": "Features"
+          },
+          "e9": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 0.1,
+            "LabelColumnName": "Durum",
+            "FeatureColumnName": "Features"
+          }
+        }
+      }
+    ],
+    "Estimators": {
+      "e0": "FeaturizeText",
+      "e1": "Concatenate",
+      "e2": "MapValueToKey",
+      "e3": "FastTreeOva",
+      "e4": "FastForestOva",
+      "e5": "LightGbmMulti",
+      "e6": "LbfgsLogisticRegressionOva",
+      "e7": "LbfgsMaximumEntropyMulti",
+      "e8": "SdcaMaximumEntropyMulti",
+      "e9": "SdcaLogisticRegressionOva",
+      "e10": "MapKeyToValue"
+    },
+    "Schema": "e0 * e1 * e2 * (e3 + e4 + e5 + e6 + e7 + e8 + e9) * e10",
+    "MetricName": "MacroAccuracy",
+    "ModelFilePath": "C:\\Users\\serka\\Desktop\\ClassificationApp\\MLModel.mlnet"
+  },
+  "Type": "TrainingConfig",
+  "Version": 4,
+  "TrainingOption": {
+    "Version": 1,
+    "Type": "ClassificationTrainingOption",
+    "TrainingTime": 300,
+    "LabelColumn": "Durum",
+    "ValidationOption": {
+      "Version": 0,
+      "Type": "TrainValidateSplitValidationOption",
+      "SplitRatio": 0.2
+    }
+  }
+}
